@@ -1,0 +1,585 @@
+@charset "UTF-8";
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  /* sticky footer */
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* sticky footer */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* //sticky footer */
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+  font-size: 16px;
+  line-height: 1.6875;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body > * {
+  /* sticky footer */
+  flex-shrink: 0;
+}
+
+section {
+  position: relative;
+}
+
+/* Grid styles */
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Tablet */
+  /* Mobile */
+  /* Mobile XS */
+}
+.container--fluid {
+  max-width: unset;
+}
+.container--no-padding {
+  padding: 0;
+}
+@media (max-width: 1199px) {
+  .container {
+    width: 900px;
+  }
+}
+@media (max-width: 899px) {
+  .container {
+    width: 600px;
+  }
+}
+@media (max-width: 599px) {
+  .container {
+    width: 320px;
+  }
+}
+
+/* Utility */
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  display: block;
+  margin-left: -10000px;
+  background: transparent;
+  font-size: 0;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* Анимация №2. Точки */
+@keyframes anim-dot-1 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(75%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(300%);
+  }
+}
+@keyframes anim-dot-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-225%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+}
+@keyframes anim-dot-3 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(200%);
+  }
+}
+@keyframes anim-dot-4 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(-250%);
+  }
+}
+@keyframes anim-dot-5 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(200%);
+  }
+}
+@keyframes anim-dot-6 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-225%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+}
+@keyframes anim-dot-7 {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(75%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(350%);
+  }
+}
+/* Анимация №4. Навигация */
+@keyframes anim-pagination {
+  0% {
+    content: "1 / 5";
+  }
+  10% {
+    content: "1 / 5";
+  }
+  20% {
+    content: "2 / 5";
+  }
+  30% {
+    content: "3 / 5";
+  }
+  40% {
+    content: "4 / 5";
+  }
+  50% {
+    content: "5 / 5";
+  }
+  60% {
+    content: "4 / 5";
+  }
+  70% {
+    content: "3 / 5";
+  }
+  80% {
+    content: "2 / 5";
+  }
+  90% {
+    content: "1 / 5";
+  }
+  100% {
+    content: "1 / 5";
+  }
+}
+@keyframes anim-pagination-right-bef {
+  0% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+}
+@keyframes anim-pagination-right-aft {
+  0% {
+    transform: rotate(-35deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(-35deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(-35deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-35deg);
+    opacity: 1;
+  }
+}
+@keyframes anim-pagination-left-bef {
+  10% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-35deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(-35deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(0);
+  }
+}
+@keyframes anim-pagination-left-aft {
+  10% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(0);
+  }
+}
+.header {
+  padding: 25px 0;
+  background-color: #6e6eff;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a.header-nav__item {
+  padding: 10px 25px;
+  border: 1px solid #6e00ff;
+  border-radius: 10px;
+  background-color: #6e6eff;
+  transition: background-color 0.1s ease-in, border-color 0.1s ease-in;
+  font-size: 14px;
+  color: #fff;
+}
+a.header-nav__item:hover {
+  background-color: #6e00ff;
+  animation: wiggle 2.5s infinite;
+}
+a.header-nav__item:active, a.header-nav__item.active {
+  background-color: rgba(110, 0, 255, 0.65);
+  border-color: #fff;
+}
+
+.anim-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: #000;
+}
+
+.anim-dots__wrapper > * {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation-timing-function: ease-in-out;
+}
+.anim-dots__wrapper > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.anim-dots__wrapper > *:nth-child(even) {
+  margin-left: 15px;
+}
+.anim-dots__wrapper > *:nth-child(even):nth-child(2), .anim-dots__wrapper > *:nth-child(even):nth-child(6) {
+  margin-left: 17px;
+}
+.anim-dots__wrapper > *:nth-child(odd):first-child, .anim-dots__wrapper > *:nth-child(odd):last-child {
+  margin-left: 2px;
+}
+.anim-dots__wrapper > *:nth-child(1) {
+  animation: anim-dot-1 10s infinite;
+}
+.anim-dots__wrapper > *:nth-child(2) {
+  animation: anim-dot-2 10s infinite;
+}
+.anim-dots__wrapper > *:nth-child(3) {
+  animation: anim-dot-3 10s infinite;
+}
+.anim-dots__wrapper > *:nth-child(4) {
+  animation: anim-dot-4 10s infinite;
+}
+.anim-dots__wrapper > *:nth-child(5) {
+  animation: anim-dot-5 10s infinite;
+}
+.anim-dots__wrapper > *:nth-child(6) {
+  animation: anim-dot-6 10s infinite;
+}
+.anim-dots__wrapper > *:nth-child(7) {
+  animation: anim-dot-7 10s infinite;
+}
+
+.anim-pagination {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anim-pagination__wrapper {
+  padding: 6px;
+  height: 52px;
+  background-color: #38c394;
+  display: flex;
+  align-items: center;
+}
+
+/* Arrows */
+.anim-pagination__arrow-left,
+.anim-pagination__arrow-right {
+  position: relative;
+  padding: 15px;
+}
+.anim-pagination__arrow-left::before, .anim-pagination__arrow-left::after,
+.anim-pagination__arrow-right::before,
+.anim-pagination__arrow-right::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  opacity: 0.5;
+  transition: transform 0.2s ease-in-out;
+}
+.anim-pagination__arrow-left:hover::before,
+.anim-pagination__arrow-right:hover::before {
+  transform: rotate(-45deg) !important;
+}
+.anim-pagination__arrow-left:hover::after,
+.anim-pagination__arrow-right:hover::after {
+  transform: rotate(45deg) !important;
+}
+
+.anim-pagination__arrow-left {
+  margin-right: 30px;
+}
+.anim-pagination__arrow-left::before, .anim-pagination__arrow-left::after {
+  left: 0;
+  transform-origin: 0 50% 0;
+}
+.anim-pagination__arrow-left::before {
+  animation: anim-pagination-left-bef 10s infinite;
+}
+.anim-pagination__arrow-left::after {
+  animation: anim-pagination-left-aft 10s infinite;
+}
+
+.anim-pagination__arrow-right {
+  margin-left: 30px;
+}
+.anim-pagination__arrow-right::before, .anim-pagination__arrow-right::after {
+  right: 0;
+  transform-origin: 100% 50% 0;
+}
+.anim-pagination__arrow-right::before {
+  animation: anim-pagination-right-bef 10s infinite;
+}
+.anim-pagination__arrow-right::after {
+  animation: anim-pagination-right-aft 10s infinite;
+}
+
+/* Text */
+.anim-pagination__item::before {
+  content: "1 / 5";
+  color: #fff;
+  animation-timing-function: linear;
+  animation: anim-pagination 10s infinite;
+}
+
+.anim-input {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anim-input__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 30px 20px 20px;
+  background-color: #483553;
+}
+.anim-input__wrapper label {
+  width: 0%;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  transition: width 1s ease-in-out;
+}
+.anim-input__wrapper input[type="text"] {
+  padding: 5px 10px;
+  border: 1px solid #000000;
+  background-color: #372a3e;
+  color: #ffffff;
+}
+.anim-input__wrapper input[type="text"]:focus + label {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,71 @@
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  85% { transform: rotate(5deg); }
+  95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Анимация №2. Точки */
+@mixin animation-mixin-dots($name, $first-anim, $second-anim) {
+  @keyframes #{$name} {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX($first-anim); }
+    50% { transform: translateX(0%); }
+    75% { transform: translateX($second-anim); }
+  }
+}
+
+@include animation-mixin-dots(anim-dot-1, 75%, 300%);
+@include animation-mixin-dots(anim-dot-2, -225%, -25%);
+@include animation-mixin-dots(anim-dot-3, 100%, 200%);
+@include animation-mixin-dots(anim-dot-4, -200%, -250%);
+@include animation-mixin-dots(anim-dot-5, 100%, 200%);
+@include animation-mixin-dots(anim-dot-6, -225%, -25%);
+@include animation-mixin-dots(anim-dot-7, 75%, 350%);
+
+/* Анимация №4. Навигация */
+
+@keyframes anim-pagination {
+  0% { content: "1 / 5"; }
+  10% { content: "1 / 5"; }
+  20% { content: "2 / 5"; }
+  30% { content: "3 / 5"; }
+  40% { content: "4 / 5"; }
+  50% { content: "5 / 5"; }
+  60% { content: "4 / 5"; }
+  70% { content: "3 / 5"; }
+  80% { content: "2 / 5"; }
+  90% { content: "1 / 5"; }
+  100% { content: "1 / 5"; }
+}
+
+// - Arrow right
+@keyframes anim-pagination-right-bef {
+  0% { transform: rotate(35deg); opacity: 1; }
+  40% { transform: rotate(35deg); opacity: 1; }
+  50% { transform: rotate(0); }
+  60% { transform: rotate(35deg); opacity: 1; }
+  100% { transform: rotate(35deg); opacity: 1; }
+}
+@keyframes anim-pagination-right-aft {
+  0% { transform: rotate(-35deg); opacity: 1; }
+  40% { transform: rotate(-35deg); opacity: 1; }
+  50% { transform: rotate(0); }
+  60% { transform: rotate(-35deg); opacity: 1; }
+  100% { transform: rotate(-35deg); opacity: 1; }
+}
+
+// - Arrow left
+@keyframes anim-pagination-left-bef {
+  10% { transform: rotate(0); }
+  20% { transform: rotate(-35deg); opacity: 1; }
+  80% { transform: rotate(-35deg); opacity: 1; }
+  90% { transform: rotate(0); }
+}
+@keyframes anim-pagination-left-aft {
+  10% { transform: rotate(0); }
+  20% { transform: rotate(35deg); opacity: 1; }
+  80% { transform: rotate(35deg); opacity: 1; }
+  90% { transform: rotate(0); }
+}

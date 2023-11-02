@@ -1,0 +1,74 @@
+.anim-pagination {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anim-pagination__wrapper {
+  padding: 6px;
+  height: 52px;
+  background-color: #38c394;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Arrows */
+.anim-pagination__arrow-left,
+.anim-pagination__arrow-right {
+  position: relative;
+  padding: 15px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    opacity: 0.5;
+    transition: transform 0.2s ease-in-out;
+  }
+  &:hover {
+    &::before {
+      transform: rotate(-45deg) !important;
+    }
+    &::after {
+      transform: rotate(45deg) !important;
+    }
+  }
+}
+
+.anim-pagination__arrow-left {
+  margin-right: 30px;
+
+  &::before,
+  &::after {
+    left: 0;
+    transform-origin: 0 50% 0;
+  }
+  &::before { animation: anim-pagination-left-bef 10s infinite; }
+  &::after { animation: anim-pagination-left-aft 10s infinite; }
+}
+.anim-pagination__arrow-right {
+  margin-left: 30px;
+
+  &::before,
+  &::after {
+    right: 0;
+    transform-origin: 100% 50% 0;
+  }
+  &::before { animation: anim-pagination-right-bef 10s infinite; }
+  &::after { animation: anim-pagination-right-aft 10s infinite; }
+}
+
+/* Text */
+.anim-pagination__item::before {
+  content: "1 / 5";
+  color: #fff;
+
+  animation-timing-function: linear;
+  animation: anim-pagination 10s infinite;
+}

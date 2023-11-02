@@ -1,0 +1,43 @@
+.anim-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-grow: 1;
+  background-color: #000;
+}
+
+.anim-dots__wrapper {
+  & > * {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+
+    background-color: #fff;
+
+    animation-timing-function: ease-in-out;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:nth-child(even) {
+      margin-left: 15px;
+      &:nth-child(2),
+      &:nth-child(6) {
+        margin-left: 17px;
+      }
+    }
+    &:nth-child(odd):first-child,
+    &:nth-child(odd):last-child {
+      margin-left: 2px;
+    }
+    &:nth-child(1) { animation: anim-dot-1 10s infinite; }
+    &:nth-child(2) { animation: anim-dot-2 10s infinite; }
+    &:nth-child(3) { animation: anim-dot-3 10s infinite; }
+    &:nth-child(4) { animation: anim-dot-4 10s infinite; }
+    &:nth-child(5) { animation: anim-dot-5 10s infinite; }
+    &:nth-child(6) { animation: anim-dot-6 10s infinite; }
+    &:nth-child(7) { animation: anim-dot-7 10s infinite; }
+  }
+}

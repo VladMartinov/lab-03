@@ -1,0 +1,13 @@
+// Base
+@import "./base/vars";
+@import "./base/reset";
+@import "./base/base";
+@import "./base/animation";
+
+// Blocks
+@import "./blocks/header";
+
+// Pages
+@import "./pages/anim-dots";
+@import "./pages/anim-pagination";
+@import "./pages/anim-input";

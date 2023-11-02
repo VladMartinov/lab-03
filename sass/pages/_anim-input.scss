@@ -1,0 +1,41 @@
+.anim-input {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anim-input__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  padding: 30px 20px 20px;
+  background-color: #483553;
+
+  label {
+    width: 0%;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+
+    text-align: center;
+    white-space: nowrap;
+
+    transition: width 1s ease-in-out;
+  }
+
+  input[type="text"] {
+    padding: 5px 10px;
+
+    border: 1px solid #000000;
+    background-color: #372a3e;
+
+    color: #ffffff;
+
+    &:focus + label {
+      width: 100%;
+    }
+  }
+}

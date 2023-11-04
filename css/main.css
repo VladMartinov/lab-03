@@ -151,6 +151,16 @@ section {
   }
 }
 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.main.background-black {
+  background-color: black;
+}
+
 /* Utility */
 .none {
   display: none !important;
@@ -422,63 +432,48 @@ a.header-nav__item:active, a.header-nav__item.active {
   border-color: #fff;
 }
 
-.anim-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  background-color: #000;
-}
-
-.anim-dots__wrapper > * {
+.anim-dots > * {
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background-color: #fff;
   animation-timing-function: ease-in-out;
 }
-.anim-dots__wrapper > *:not(:last-child) {
+.anim-dots > *:not(:last-child) {
   margin-bottom: 10px;
 }
-.anim-dots__wrapper > *:nth-child(even) {
+.anim-dots > *:nth-child(even) {
   margin-left: 15px;
 }
-.anim-dots__wrapper > *:nth-child(even):nth-child(2), .anim-dots__wrapper > *:nth-child(even):nth-child(6) {
+.anim-dots > *:nth-child(even):nth-child(2), .anim-dots > *:nth-child(even):nth-child(6) {
   margin-left: 17px;
 }
-.anim-dots__wrapper > *:nth-child(odd):first-child, .anim-dots__wrapper > *:nth-child(odd):last-child {
+.anim-dots > *:nth-child(odd):first-child, .anim-dots > *:nth-child(odd):last-child {
   margin-left: 2px;
 }
-.anim-dots__wrapper > *:nth-child(1) {
+.anim-dots > *:nth-child(1) {
   animation: anim-dot-1 10s infinite;
 }
-.anim-dots__wrapper > *:nth-child(2) {
+.anim-dots > *:nth-child(2) {
   animation: anim-dot-2 10s infinite;
 }
-.anim-dots__wrapper > *:nth-child(3) {
+.anim-dots > *:nth-child(3) {
   animation: anim-dot-3 10s infinite;
 }
-.anim-dots__wrapper > *:nth-child(4) {
+.anim-dots > *:nth-child(4) {
   animation: anim-dot-4 10s infinite;
 }
-.anim-dots__wrapper > *:nth-child(5) {
+.anim-dots > *:nth-child(5) {
   animation: anim-dot-5 10s infinite;
 }
-.anim-dots__wrapper > *:nth-child(6) {
+.anim-dots > *:nth-child(6) {
   animation: anim-dot-6 10s infinite;
 }
-.anim-dots__wrapper > *:nth-child(7) {
+.anim-dots > *:nth-child(7) {
   animation: anim-dot-7 10s infinite;
 }
 
 .anim-pagination {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.anim-pagination__wrapper {
   padding: 6px;
   height: 52px;
   background-color: #38c394;
@@ -551,19 +546,12 @@ a.header-nav__item:active, a.header-nav__item.active {
 }
 
 .anim-input {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.anim-input__wrapper {
   display: flex;
   flex-direction: column-reverse;
   padding: 30px 20px 20px;
   background-color: #483553;
 }
-.anim-input__wrapper label {
+.anim-input label {
   width: 0%;
   font-size: 13px;
   font-weight: 700;
@@ -572,14 +560,606 @@ a.header-nav__item:active, a.header-nav__item.active {
   white-space: nowrap;
   transition: width 1s ease-in-out;
 }
-.anim-input__wrapper input[type="text"] {
+.anim-input input[type="text"] {
   padding: 5px 10px;
   border: 1px solid #000000;
   background-color: #372a3e;
   color: #ffffff;
 }
-.anim-input__wrapper input[type="text"]:focus + label {
+.anim-input input[type="text"]:focus + label {
   width: 100%;
+}
+
+.anim-marvel {
+  position: relative;
+  display: flex;
+}
+.anim-marvel .iron-man {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  width: 275px;
+  height: 550px;
+}
+.anim-marvel .iron-man__head-container {
+  width: 40px;
+  height: 15%;
+  overflow: hidden;
+  border-radius: 25% 25% 0 0;
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__head-container .iron-man__head-mask {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 35px;
+  background-color: #deb50a;
+}
+.anim-marvel .iron-man__head-container .iron-man__head-mask > div:nth-of-type(1) {
+  position: relative;
+  margin-bottom: -5px;
+  top: -12px;
+  width: 80%;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__head-container .iron-man__head-mask .iron-man__head-mask-eyes {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 7px;
+}
+.anim-marvel .iron-man__head-container .iron-man__head-mask .iron-man__head-mask-eyes > * {
+  width: 25%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.anim-marvel .iron-man__head-container .iron-man__head-mask > div:nth-of-type(3) {
+  position: relative;
+  bottom: -10px;
+  width: 20px;
+  height: 65%;
+  background-color: #deb50a;
+}
+.anim-marvel .iron-man__body-container {
+  position: relative;
+  display: flex;
+  top: -35px;
+  width: 100%;
+  height: 85%;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left,
+.anim-marvel .iron-man__body-container .iron-man__arm-right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder-joint,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder-joint {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder {
+  position: relative;
+  top: -5px;
+  z-index: 1;
+  width: 15px;
+  height: 65px;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder > div,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder > div {
+  position: relative;
+  top: 75%;
+  width: 100%;
+  height: 45%;
+  border-radius: 0 0 0 50%;
+  background-color: inherit;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-forearm,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-forearm {
+  position: relative;
+  width: 50px;
+  height: 100px;
+  bottom: 10px;
+  overflow: hidden;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-forearm > div,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-forearm > div {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  border-radius: 45%;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-wrist,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-wrist {
+  position: relative;
+  top: -25px;
+  width: 15px;
+  height: 15px;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left {
+  position: relative;
+  right: -25px;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder-joint {
+  background-color: #922800;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder {
+  background-color: #bf8a1e;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder > div {
+  border-radius: 0 0 0 50%;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-forearm {
+  transform: translateX(-36%);
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-forearm > div {
+  right: 0;
+  background-color: #922800;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-wrist {
+  right: -15px;
+  border-radius: 0 50% 50% 0;
+  background-color: #922800;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right {
+  position: relative;
+  left: -25px;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder-joint {
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder {
+  background-color: #deb50a;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder > div {
+  border-radius: 0 0 50% 0;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-forearm {
+  transform: translateX(34%);
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-forearm > div {
+  right: 100%;
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-wrist {
+  left: -15px;
+  border-radius: 50% 0 0 50%;
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 15px;
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center > * {
+  position: relative;
+  top: -32%;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__body-torso {
+  width: 100%;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #922800;
+  z-index: 1;
+  overflow: hidden;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__body-torso-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -30px;
+  bottom: -10px;
+  border-radius: 50%;
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__body-torso-core {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 38px;
+  left: 50%;
+  border-radius: 50%;
+  background-color: #deb50a;
+  transform: translateX(-50%);
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__body-torso-core > div {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__body-pelvis {
+  width: 70px;
+  height: 70px;
+  top: -38%;
+  background-color: #922800;
+  overflow: hidden;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__body-pelvis-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -30px;
+  bottom: 0px;
+  background-color: #a63600;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container {
+  width: 70px;
+  height: 150px;
+  top: -39%;
+  display: flex;
+  justify-content: space-between;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-left,
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-right {
+  position: relative;
+  width: 25%;
+  height: 190px;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-left > div:nth-of-type(1),
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-right > div:nth-of-type(1) {
+  position: absolute;
+  bottom: 80%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-left > div:nth-of-type(2),
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-right > div:nth-of-type(2) {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-25%);
+  width: 200%;
+  height: 100px;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-left {
+  background-color: #bf8a1e;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-left > div:nth-of-type(1) {
+  border-radius: 0 50% 0 0;
+  background-color: #bf8a1e;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-left > div:nth-of-type(2) {
+  border-radius: 0 50% 0 0;
+  background-color: #922800;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-right {
+  background-color: #deb50a;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-right > div:nth-of-type(1) {
+  border-radius: 50% 0 0 0;
+  background-color: #deb50a;
+}
+.anim-marvel .iron-man__body-container .iron-man__body-center .iron-man__legs-container .iron-man__legs-right > div:nth-of-type(2) {
+  border-radius: 50% 0 0 0;
+  background-color: #a63600;
+}
+.anim-marvel .tor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  bottom: 27px;
+  left: -71px;
+  z-index: 1;
+  width: 275px;
+  height: 550px;
+}
+.anim-marvel .tor__head-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40px;
+  height: 15%;
+  background-color: #f2deaa;
+}
+.anim-marvel .tor__head-container .tor__head-helmet {
+  position: relative;
+  display: flex;
+  align-items: end;
+  bottom: 49%;
+}
+.anim-marvel .tor__head-container .tor__head-helmet > div:nth-of-type(1), .anim-marvel .tor__head-container .tor__head-helmet > div:nth-of-type(3) {
+  width: 20px;
+  height: 40px;
+}
+.anim-marvel .tor__head-container .tor__head-helmet > div:nth-of-type(1) {
+  transform: translateX(35%);
+  border-radius: 0 50% 0 25%;
+  background-color: #669699;
+}
+.anim-marvel .tor__head-container .tor__head-helmet > div:nth-of-type(2) {
+  z-index: 1;
+  width: 40px;
+  height: 25px;
+  border-radius: 50% 50% 0 0;
+  background-color: #73a9c5;
+}
+.anim-marvel .tor__head-container .tor__head-helmet > div:nth-of-type(3) {
+  border-radius: 50% 0 25% 0;
+  background-color: #8db9e4;
+}
+.anim-marvel .tor__head-container .tor__head-hair {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #c6af50;
+}
+.anim-marvel .tor__head-container .tor__head-moustache {
+  width: 50%;
+  height: 20px;
+  transform: translateY(-100%);
+  background-color: #c6af50;
+}
+.anim-marvel .tor__head-container .tor__head-beard {
+  width: 100%;
+  height: 20px;
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+.anim-marvel .tor__head-container .tor__head-beard > div {
+  position: relative;
+  top: -10px;
+  width: 100%;
+  height: 20px;
+  background-color: #c6af50;
+  border-radius: 40%;
+}
+.anim-marvel .tor__head-container .tor__head-backhair {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  z-index: -1;
+  background-color: #c6af50;
+}
+.anim-marvel .tor__body-container {
+  position: relative;
+  display: flex;
+  top: -30px;
+  width: 100%;
+  height: 85%;
+}
+.anim-marvel .tor__body-container .tor__arm-left,
+.anim-marvel .tor__body-container .tor__arm-right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 15%;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-shoulder-joint,
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-shoulder-joint {
+  width: 75px;
+  height: 75px;
+  z-index: 2;
+  background-color: #922800;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-shoulder,
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-shoulder {
+  position: relative;
+  top: -25px;
+  width: 65px;
+  height: 120px;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-wrist,
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-wrist {
+  width: 15px;
+  height: 25px;
+  border-radius: 0 0 30% 30%;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-wrist > div,
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-wrist > div {
+  position: relative;
+  top: 5px;
+  width: 100%;
+  height: 7px;
+  background-color: black;
+}
+.anim-marvel .tor__body-container .tor__arm-left {
+  position: relative;
+  right: -25px;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-shoulder-joint {
+  background-color: #ffc587;
+  border-radius: 50% 0 50% 50%;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-shoulder {
+  background-color: #ffc587;
+  border-radius: 0 0 0 50%;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-wrist {
+  transform: translate(165%, -100%);
+  background-color: #ffc587;
+  z-index: 1;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-hammer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(40%, -30%);
+  width: 65px;
+  height: 100px;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-hammer > div:nth-of-type(1) {
+  width: 15%;
+  height: 50%;
+  background-color: black;
+}
+.anim-marvel .tor__body-container .tor__arm-left .tor__arm-hammer > div:nth-of-type(2) {
+  width: 100%;
+  height: 50%;
+  border-radius: 25%;
+  background-color: black;
+}
+.anim-marvel .tor__body-container .tor__arm-right {
+  position: relative;
+  left: -25px;
+}
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-shoulder-joint {
+  background-color: #fdd0e4;
+  border-radius: 0 50% 50% 50%;
+}
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-shoulder {
+  background-color: #fdd0e4;
+  border-radius: 0 0 50% 0;
+}
+.anim-marvel .tor__body-container .tor__arm-right .tor__arm-wrist {
+  transform: translate(-165%, -100%);
+  background-color: #fdd0e4;
+}
+.anim-marvel .tor__body-container .tor__body-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  overflow: hidden;
+  z-index: 3;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso {
+  position: relative;
+  width: 192px;
+  height: 192px;
+  transform: translateY(-60%) rotate(45deg) skew(12deg, 12deg);
+  border-radius: 0 0 10% 0;
+  background-color: #004177;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(1), .anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(2), .anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(3), .anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(4) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: skew(-12deg, -12deg) rotate(-45deg);
+  background-color: #92bdea;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(3), .anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(4) {
+  width: 30px;
+  height: 30px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(1) {
+  bottom: 12px;
+  left: 72px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(2) {
+  bottom: 70px;
+  right: 12px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(3) {
+  bottom: 8px;
+  left: 118px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-torso > div:nth-of-type(4) {
+  bottom: 44px;
+  right: 8px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis {
+  position: relative;
+  top: -90px;
+  width: 60px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis > div:nth-of-type(1) {
+  width: 100%;
+  height: 5px;
+  background-color: #9b955a;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis > div:nth-of-type(2) {
+  width: 100%;
+  height: 30px;
+  background-color: #004177;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers .tor__body-trousers-left,
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers .tor__body-trousers-right {
+  width: 40%;
+  height: 75px;
+  background-color: #004177;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers .tor__body-trousers-left > div,
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers .tor__body-trousers-right > div {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  z-index: 1;
+  top: 100%;
+  border-radius: 50% 50% 0 0;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers .tor__body-trousers-left > div {
+  background-color: #c79614;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__body-pelvis .tor__body-pelvis-trousers .tor__body-trousers-right > div {
+  background-color: #b8410d;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  top: -80px;
+  width: 60px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-left,
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-right {
+  width: 15px;
+  height: 135px;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-left > div,
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-right > div {
+  position: relative;
+  width: 30px;
+  height: 5px;
+  top: 100%;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-left {
+  background-color: #b8410d;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-left > div {
+  transform: translateX(-50%);
+  background-color: #9b955a;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-right {
+  background-color: #c79614;
+}
+.anim-marvel .tor__body-container .tor__body-center .tor__legs-container .tor__legs-right > div {
+  background-color: #9b955a;
+}
+.anim-marvel .tor__body-container .tor__raincoat {
+  position: absolute;
+  left: 15%;
+  top: 0;
+  z-index: -1;
+  width: 70%;
+  height: 320px;
+  background-color: #a72300;
+}
+.anim-marvel .tor__body-container .tor__raincoat .tor__raincoat-shadow {
+  width: 14%;
+  height: 100%;
+  background-color: #7a1804;
 }
 
 /*# sourceMappingURL=main.css.map */

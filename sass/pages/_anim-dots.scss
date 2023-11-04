@@ -1,13 +1,4 @@
 .anim-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-grow: 1;
-  background-color: #000;
-}
-
-.anim-dots__wrapper {
   & > * {
     width: 5px;
     height: 5px;

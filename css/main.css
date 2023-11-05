@@ -156,6 +156,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  overflow-x: hidden;
 }
 .main.background-black {
   background-color: black;
@@ -572,7 +573,9 @@ a.header-nav__item:active, a.header-nav__item.active {
 
 .anim-marvel {
   position: relative;
+  align-items: end;
   display: flex;
+  transform: translateX(20%);
 }
 .anim-marvel .iron-man {
   position: relative;
@@ -1160,6 +1163,674 @@ a.header-nav__item:active, a.header-nav__item.active {
   width: 14%;
   height: 100%;
   background-color: #7a1804;
+}
+.anim-marvel .hulk {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 575px;
+  height: 730px;
+  z-index: 0;
+  transform: translateX(-55%);
+}
+.anim-marvel .hulk .hulk__head-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80px;
+  height: 100px;
+}
+.anim-marvel .hulk .hulk__head-container::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  border-bottom: 80px solid #babd00;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-hair {
+  margin-bottom: 10px;
+  width: 90%;
+  height: 20px;
+  border-radius: 50% 50% 0 0;
+  background-color: #014501;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-brows {
+  margin-bottom: 10px;
+  width: 55%;
+  height: 10px;
+  background-color: #014501;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 25px;
+  border-radius: 10px;
+  background-color: #4c0804;
+  overflow: hidden;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:first-of-type, .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:last-of-type {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  background-color: #babd00;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:first-of-type {
+  top: 0;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:last-of-type {
+  bottom: 0;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(2), .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(4) {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(3) {
+  position: relative;
+  margin: 0 auto;
+  width: 10px;
+  flex-grow: 1;
+}
+.anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(3)::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0;
+  background-color: #975a44;
+}
+.anim-marvel .hulk .hulk__body-container {
+  display: flex;
+  align-items: start;
+  z-index: 1;
+  width: 100%;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left,
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(3%);
+  width: 25%;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-shoulder,
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-shoulder {
+  width: 100%;
+  height: 360px;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-shoulder > div,
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-shoulder > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  border-radius: 50%;
+  background-color: white;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-wrist,
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-wrist {
+  width: 75%;
+  height: 100px;
+  border-radius: 50%;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left {
+  align-items: end;
+  right: -100px;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-shoulder {
+  border-radius: 50% 0 0 40%;
+  background-color: #949400;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-shoulder > div {
+  left: 50%;
+  transform: translate(15%, -40%);
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-wrist {
+  transform: translate(-5%, -85%);
+  background-color: #949400;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right {
+  align-items: start;
+  left: -100px;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-shoulder {
+  border-radius: 0 50% 40% 0;
+  background-color: #babd00;
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-shoulder > div {
+  right: 50%;
+  transform: translate(-15%, -40%);
+}
+.anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-wrist {
+  transform: translate(5%, -85%);
+  background-color: #babd00;
+}
+.anim-marvel .hulk .hulk__body-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  transform: translateY(-5%);
+  width: 65%;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #949400;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(1), .anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(1) {
+  left: 5%;
+  background-color: #a1a400;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(2) {
+  left: 10%;
+  background-color: #bcbd00;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(3), .anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(4) {
+  position: absolute;
+  top: 25%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #949400;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(3) {
+  left: 15%;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(4) {
+  right: 25%;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-torso > div:nth-of-type(5) {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #949400;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis {
+  width: 70px;
+  transform: translateY(-5px);
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-belt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10px;
+  background-color: #3e2a2f;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-belt > div {
+  width: 5px;
+  height: 5px;
+  background-color: #977ac5;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis > div:nth-of-type(2) {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #2a1057, #5421a6);
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-trousers {
+  display: flex;
+  justify-content: space-between;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-trousers .hulk__body-trousers-left,
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-trousers .hulk__body-trousers-right {
+  width: 20%;
+  height: 55px;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-trousers .hulk__body-trousers-left {
+  background-color: #2a1057;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__body-pelvis .hulk__body-pelvis-trousers .hulk__body-trousers-right {
+  background-color: #5421a6;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  transform: translateY(-10%);
+}
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-left,
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-right {
+  position: relative;
+  width: 20%;
+  height: 97px;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-left > div,
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-right > div {
+  position: absolute;
+  width: 200%;
+  height: 5px;
+  top: 95%;
+  background-color: inherit;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-left {
+  background-color: #585713;
+}
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-left > div {
+  transform: translateX(-50%);
+}
+.anim-marvel .hulk .hulk__body-center .hulk__legs-container .hulk__legs-right {
+  background-color: #bcbd00;
+}
+.anim-marvel .captain {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 325px;
+  height: 577px;
+  z-index: 1;
+  transform: translateX(-185%);
+}
+.anim-marvel .captain .captain__head-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40px;
+  height: 12%;
+  border-radius: 30% 30% 0 0;
+  background-color: #4ea7e2;
+}
+.anim-marvel .captain .captain__head-container .captain__head-mask {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 34px;
+}
+.anim-marvel .captain .captain__head-container .captain__head-mask .captain__head-mask-star {
+  position: relative;
+  display: block;
+  margin: 3px auto;
+  width: 0;
+  height: 0;
+  color: #fc2e5a;
+  border-right: 5px solid transparent;
+  border-bottom: 4px solid white;
+  border-left: 5px solid transparent;
+  transform: rotate(35deg);
+}
+.anim-marvel .captain .captain__head-container .captain__head-mask .captain__head-mask-star:before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  top: -2px;
+  left: -3px;
+  border-bottom: 4px solid white;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-35deg);
+}
+.anim-marvel .captain .captain__head-container .captain__head-mask .captain__head-mask-star:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  top: 0px;
+  left: -5px;
+  color: #fc2e5a;
+  border-right: 5px solid transparent;
+  border-bottom: 4px solid white;
+  border-left: 5px solid transparent;
+  transform: rotate(-70deg);
+}
+.anim-marvel .captain .captain__head-container .captain__head-mask .captain__head-nose {
+  position: relative;
+  flex-grow: 1;
+}
+.anim-marvel .captain .captain__head-container .captain__head-mask .captain__head-nose::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  bottom: 0;
+  left: 50%;
+  border-radius: 2px 2px 0 0;
+  background-color: #f6b2aa;
+  transform: translateX(-50%);
+}
+.anim-marvel .captain .captain__head-container .captain__head-face {
+  width: 100%;
+  height: 35px;
+  border-radius: 0 0 50% 50%;
+  background: linear-gradient(90deg, #eba580, #f6b2aa);
+}
+.anim-marvel .captain .captain__body-container {
+  display: flex;
+  align-items: start;
+  z-index: 1;
+  width: 100%;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right,
+.anim-marvel .captain .captain__body-container .captain__arm-left {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-shoulder-joint,
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-shoulder-joint {
+  width: 100%;
+  height: 55px;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-shoulder,
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-shoulder {
+  position: relative;
+  width: 80%;
+  height: 90px;
+  z-index: 1;
+  background-color: #ffffcb;
+  transform: translateY(-25%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-forearm,
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-forearm {
+  width: 30%;
+  height: 30px;
+  background-color: #ffffcb;
+  transform: translateY(-85%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-wrist,
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-wrist {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  overflow: hidden;
+  transform: translateY(-75%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-wrist > div,
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-wrist > div {
+  width: 100%;
+  height: 35px;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-brush,
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-brush {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-left {
+  align-items: end;
+  transform: translateX(40%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-shoulder-joint {
+  border-radius: 50% 0 0 50%;
+  background-color: #2a758e;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-shoulder {
+  border-radius: 30% 5% 0 50%;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-wrist {
+  align-items: end;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-wrist > div {
+  background-color: #a03400;
+  transform: translateX(25%) skew(15deg);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-left .captain__arm-brush {
+  background-color: #a03400;
+  transform: translate(25%, -200%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right {
+  align-items: start;
+  transform: translateX(-40%);
+  z-index: 2;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-shoulder-joint {
+  background-color: #4ea7e2;
+  border-radius: 0 50% 50% 0;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-shoulder {
+  z-index: -1;
+  border-radius: 50% 30% 50% 0;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-wrist {
+  align-items: start;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-wrist > div {
+  background-color: #ad390e;
+  transform: translateX(-25%) skew(-15deg);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__arm-brush {
+  background-color: #ad390e;
+  transform: translate(-25%, -200%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 10;
+  transform: translate(-45%, -75%);
+  border-radius: 50%;
+  background-color: #ad390e;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(1), .anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(2), .anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(3) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(1) {
+  width: 80%;
+  height: 80%;
+  border-radius: inherit;
+  background-color: #ffffcb;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(2) {
+  width: 60%;
+  height: 60%;
+  border-radius: inherit;
+  background-color: #4ea7e2;
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(3) {
+  margin: 15px 0;
+  width: 0;
+  height: 0;
+  border-right: 25px solid transparent;
+  border-bottom: 20px solid white;
+  border-left: 25px solid transparent;
+  transform: translate(-45%, -135%) rotate(35deg);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(3):before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  top: -10px;
+  left: -15px;
+  border-bottom: 20px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: rotate(-35deg);
+}
+.anim-marvel .captain .captain__body-container .captain__arm-right .captain__shield > div:nth-of-type(3):after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  top: 0px;
+  left: -25px;
+  border-right: 25px solid transparent;
+  border-bottom: 20px solid white;
+  border-left: 25px solid transparent;
+  transform: rotate(-70deg);
+}
+.anim-marvel .captain .captain__body-container .captain__body-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  overflow: hidden;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-torso {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  border-radius: 0 0 50% 50%;
+  background-color: #2a758e;
+  transform: translateY(-40%);
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-torso > div:nth-of-type(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 10px;
+  border-radius: 0 0 50% 50%;
+  background-color: #4ea7e2;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-torso > div:nth-of-type(2) {
+  position: absolute;
+  margin: 15px 0;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  border-right: 25px solid transparent;
+  border-bottom: 20px solid white;
+  border-left: 25px solid transparent;
+  transform: translate(-45%, 0%) rotate(35deg);
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-torso > div:nth-of-type(2):before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  top: -10px;
+  left: -15px;
+  border-bottom: 20px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: rotate(-35deg);
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-torso > div:nth-of-type(2):after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  top: 0px;
+  left: -25px;
+  border-right: 25px solid transparent;
+  border-bottom: 20px solid white;
+  border-left: 25px solid transparent;
+  transform: rotate(-70deg);
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis {
+  width: 50px;
+  transform: translateY(-40%);
+  z-index: 2;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-belt {
+  width: 100%;
+  height: 15px;
+  background-color: #a03400;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-belt > div {
+  margin: 0 auto;
+  width: 40%;
+  height: 100%;
+  background-color: white;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis > div:nth-of-type(2) {
+  width: 100%;
+  height: 10px;
+  background-color: #445465;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis > div:nth-of-type(3) {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #2a758e, #4ea7e2);
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-trousers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-trousers .captain__body-trousers-left,
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-trousers .captain__body-trousers-right {
+  width: 15%;
+  height: 150px;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-trousers .captain__body-trousers-left {
+  background-color: #2a758e;
+}
+.anim-marvel .captain .captain__body-container .captain__body-center .captain__body-pelvis .captain__body-pelvis-trousers .captain__body-trousers-right {
+  background-color: #4ea7e2;
+}
+.anim-marvel .captain .captain__legs-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 55px;
+  z-index: 2;
+  transform: translateY(-125%);
+}
+.anim-marvel .captain .captain__legs-container .captain__legs-left,
+.anim-marvel .captain .captain__legs-container .captain__legs-right {
+  position: relative;
+  width: 20%;
+  height: 60px;
+}
+.anim-marvel .captain .captain__legs-container .captain__legs-left > div:nth-of-type(1),
+.anim-marvel .captain .captain__legs-container .captain__legs-right > div:nth-of-type(1) {
+  position: absolute;
+  width: 175%;
+  height: 15px;
+  top: 0;
+  left: 50%;
+  background-color: inherit;
+  transform: translateX(-50%);
+}
+.anim-marvel .captain .captain__legs-container .captain__legs-left > div:nth-of-type(2),
+.anim-marvel .captain .captain__legs-container .captain__legs-right > div:nth-of-type(2) {
+  position: absolute;
+  width: 300%;
+  height: 5px;
+  bottom: 0;
+  background-color: inherit;
+}
+.anim-marvel .captain .captain__legs-container .captain__legs-left {
+  background-color: #a03400;
+}
+.anim-marvel .captain .captain__legs-container .captain__legs-left > div:nth-of-type(2) {
+  transform: translateX(-75%);
+}
+.anim-marvel .captain .captain__legs-container .captain__legs-right {
+  background-color: #ad390e;
 }
 
 /*# sourceMappingURL=main.css.map */

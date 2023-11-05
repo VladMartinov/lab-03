@@ -73,6 +73,8 @@ section {
   justify-content: center;
   flex-grow: 1;
 
+  overflow-x: hidden;
+
   &.background-black {
     background-color: black;
   }

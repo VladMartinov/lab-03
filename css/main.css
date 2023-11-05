@@ -405,17 +405,118 @@ section {
   }
 }
 /* Анимация №11. Marvel */
+@keyframes iron-man-fly {
+  5% {
+    transform: translateY(0);
+  }
+  11% {
+    transform: translateY(-500%);
+  }
+  17% {
+    transform: translateY(0);
+  }
+}
+@keyframes iron-man-face {
+  0% {
+    transform: scaleY(1);
+  }
+  5% {
+    transform: scaleY(0.6);
+  }
+  10% {
+    transform: scaleY(0.6);
+  }
+  11% {
+    transform: scaleY(1);
+  }
+}
+@keyframes iron-man-left-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(30deg);
+  }
+  17% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes iron-man-right-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(-30deg);
+  }
+  17% {
+    transform: rotate(-30deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes iron-man-left-wrist {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(90deg) translateY(50%);
+  }
+  17% {
+    transform: rotate(90deg) translateY(50%);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes iron-man-right-wrist {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(-90deg) translateY(50%);
+  }
+  17% {
+    transform: rotate(-90deg) translateY(50%);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes iron-man-laser {
+  2% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 0;
+  }
+}
 @keyframes hulk-left-arm {
   0% {
     transform: rotate(0deg) scaleX(1);
   }
-  25% {
+  6% {
     transform: rotate(160deg) scaleX(-1);
   }
-  55% {
+  13% {
     transform: rotate(160deg) scaleX(-1);
   }
-  100% {
+  20% {
     transform: rotate(0deg) scaleX(1);
   }
 }
@@ -423,13 +524,13 @@ section {
   0% {
     transform: rotate(0deg) scaleX(1);
   }
-  25% {
+  6% {
     transform: rotate(-160deg) scaleX(-1);
   }
-  55% {
+  13% {
     transform: rotate(-160deg) scaleX(-1);
   }
-  100% {
+  20% {
     transform: rotate(0deg) scaleX(1);
   }
 }
@@ -437,13 +538,13 @@ section {
   0% {
     top: 0;
   }
-  25% {
+  6% {
     top: -100%;
   }
-  55% {
+  13% {
     top: -100%;
   }
-  100% {
+  20% {
     top: 0;
   }
 }
@@ -451,39 +552,39 @@ section {
   0% {
     bottom: 0;
   }
-  25% {
+  6% {
     bottom: -100%;
   }
-  55% {
+  13% {
     bottom: -100%;
   }
-  100% {
+  20% {
     bottom: 0;
   }
 }
 @keyframes earthshake {
-  30% {
+  7% {
     transform: translateX(20%) rotate(0);
   }
-  35% {
+  8% {
     transform: translateX(20%) rotate(10deg);
   }
-  37% {
+  9% {
     transform: translateX(20%) rotate(-10deg);
   }
-  40% {
+  10% {
     transform: translateX(20%) rotate(10deg);
   }
-  43% {
+  11% {
     transform: translateX(20%) rotate(-10deg);
   }
-  45% {
+  12% {
     transform: translateX(20%) rotate(10deg);
   }
-  48% {
+  13% {
     transform: translateX(20%) rotate(-10deg);
   }
-  55% {
+  14% {
     transform: translateX(20%) rotate(0);
   }
 }
@@ -660,7 +761,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   display: flex;
   transform: translateX(20%);
   transform-origin: 40% 50% 0;
-  animation: earthshake 25s ease-in-out infinite;
+  animation: earthshake 100s ease-in-out 50s infinite;
 }
 .anim-marvel .iron-man {
   position: relative;
@@ -670,6 +771,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   z-index: 1;
   width: 275px;
   height: 550px;
+  animation: iron-man-fly 100s ease-in-out infinite;
 }
 .anim-marvel .iron-man__head-container {
   width: 40px;
@@ -677,6 +779,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   overflow: hidden;
   border-radius: 25% 25% 0 0;
   background-color: #a63600;
+  animation: iron-man-face 100s ease-in infinite;
 }
 .anim-marvel .iron-man__head-container .iron-man__head-mask {
   position: relative;
@@ -728,6 +831,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   align-items: center;
   flex-direction: column;
   width: 20%;
+  transform-origin: 50% 5% 0;
 }
 .anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder-joint,
 .anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder-joint {
@@ -776,9 +880,20 @@ a.header-nav__item:active, a.header-nav__item.active {
   width: 15px;
   height: 15px;
 }
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-wrist .iron-man__arm-laser,
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-wrist .iron-man__arm-laser {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 200%;
+  height: 70px;
+  opacity: 0;
+  background: linear-gradient(180deg, #007dff, #ffd9d1);
+}
 .anim-marvel .iron-man__body-container .iron-man__arm-left {
   position: relative;
   right: -25px;
+  animation: iron-man-left-arm 100s ease-in-out infinite;
 }
 .anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-shoulder-joint {
   background-color: #922800;
@@ -800,10 +915,18 @@ a.header-nav__item:active, a.header-nav__item.active {
   right: -15px;
   border-radius: 0 50% 50% 0;
   background-color: #922800;
+  transform-origin: left;
+  animation: iron-man-left-wrist 100s ease-in-out infinite;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-left .iron-man__arm-wrist .iron-man__arm-laser {
+  border-radius: 50% 35% 50% 10%;
+  transform: rotate(90deg) translate(-130%, -40%);
+  animation: iron-man-laser 100s ease-in-out infinite;
 }
 .anim-marvel .iron-man__body-container .iron-man__arm-right {
   position: relative;
   left: -25px;
+  animation: iron-man-right-arm 100s ease-in-out infinite;
 }
 .anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-shoulder-joint {
   background-color: #a63600;
@@ -825,6 +948,13 @@ a.header-nav__item:active, a.header-nav__item.active {
   left: -15px;
   border-radius: 50% 0 0 50%;
   background-color: #a63600;
+  transform-origin: right;
+  animation: iron-man-right-wrist 100s ease-in-out infinite;
+}
+.anim-marvel .iron-man__body-container .iron-man__arm-right .iron-man__arm-wrist .iron-man__arm-laser {
+  border-radius: 35% 50% 10% 50%;
+  transform: rotate(-90deg) translate(130%, -80%);
+  animation: iron-man-laser 100s ease-in-out infinite;
 }
 .anim-marvel .iron-man__body-container .iron-man__body-center {
   display: flex;
@@ -1313,11 +1443,11 @@ a.header-nav__item:active, a.header-nav__item.active {
 }
 .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:first-of-type {
   top: 0;
-  animation: hulk-top-mouse 25s ease-in-out infinite;
+  animation: hulk-top-mouse 100s ease-in-out 50s infinite;
 }
 .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:last-of-type {
   bottom: 0;
-  animation: hulk-bottom-mouse 25s ease-in-out infinite;
+  animation: hulk-bottom-mouse 100s ease-in-out 50s infinite;
 }
 .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(2), .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(4) {
   width: 100%;
@@ -1379,7 +1509,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   align-items: end;
   right: -100px;
   transform-origin: 50% 10% 0;
-  animation: hulk-left-arm 25s ease-in-out infinite;
+  animation: hulk-left-arm 100s ease-in-out 50s infinite;
 }
 .anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-shoulder {
   border-radius: 50% 0 0 40%;
@@ -1397,7 +1527,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   align-items: start;
   left: -100px;
   transform-origin: 50% 10% 0;
-  animation: hulk-right-arm 25s ease-in-out infinite;
+  animation: hulk-right-arm 100s ease-in-out 50s infinite;
 }
 .anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-shoulder {
   border-radius: 0 50% 40% 0;

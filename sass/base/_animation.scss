@@ -69,3 +69,44 @@
   80% { transform: rotate(35deg); opacity: 1; }
   90% { transform: rotate(0); }
 }
+
+/* Анимация №11. Marvel */
+
+// Hulk
+@keyframes hulk-left-arm {
+  0% { transform: rotate(0deg) scaleX(1); }
+  25% {transform: rotate(160deg) scaleX(-1); }
+  55% { transform: rotate(160deg) scaleX(-1); }
+  100% { transform: rotate(0deg) scaleX(1); }
+}
+@keyframes hulk-right-arm {
+  0% { transform: rotate(0deg) scaleX(1); }
+  25% { transform: rotate(-160deg) scaleX(-1); }
+  55% { transform: rotate(-160deg) scaleX(-1); }
+  100% { transform: rotate(0deg) scaleX(1); }
+}
+
+@keyframes hulk-top-mouse {
+  0% { top: 0; }
+  25% { top: -100%; }
+  55% { top: -100%; }
+  100% { top: 0; }
+}
+@keyframes hulk-bottom-mouse {
+  0% { bottom: 0; }
+  25% { bottom: -100%; }
+  55% { bottom: -100%; }
+  100% { bottom: 0; }
+}
+
+// Other
+@keyframes earthshake {
+  30% { transform: translateX(20%) rotate(0); }
+  35% { transform: translateX(20%) rotate(10deg); }
+  37% { transform: translateX(20%) rotate(-10deg); }
+  40% { transform: translateX(20%) rotate(10deg); }
+  43% { transform: translateX(20%) rotate(-10deg); }
+  45% { transform: translateX(20%) rotate(10deg); }
+  48% { transform: translateX(20%) rotate(-10deg); }
+  55% { transform: translateX(20%) rotate(0); }
+}

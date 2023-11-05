@@ -404,6 +404,89 @@ section {
     transform: rotate(0);
   }
 }
+/* Анимация №11. Marvel */
+@keyframes hulk-left-arm {
+  0% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  25% {
+    transform: rotate(160deg) scaleX(-1);
+  }
+  55% {
+    transform: rotate(160deg) scaleX(-1);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+@keyframes hulk-right-arm {
+  0% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  25% {
+    transform: rotate(-160deg) scaleX(-1);
+  }
+  55% {
+    transform: rotate(-160deg) scaleX(-1);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+@keyframes hulk-top-mouse {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -100%;
+  }
+  55% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes hulk-bottom-mouse {
+  0% {
+    bottom: 0;
+  }
+  25% {
+    bottom: -100%;
+  }
+  55% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes earthshake {
+  30% {
+    transform: translateX(20%) rotate(0);
+  }
+  35% {
+    transform: translateX(20%) rotate(10deg);
+  }
+  37% {
+    transform: translateX(20%) rotate(-10deg);
+  }
+  40% {
+    transform: translateX(20%) rotate(10deg);
+  }
+  43% {
+    transform: translateX(20%) rotate(-10deg);
+  }
+  45% {
+    transform: translateX(20%) rotate(10deg);
+  }
+  48% {
+    transform: translateX(20%) rotate(-10deg);
+  }
+  55% {
+    transform: translateX(20%) rotate(0);
+  }
+}
 .header {
   padding: 25px 0;
   background-color: #6e6eff;
@@ -576,13 +659,15 @@ a.header-nav__item:active, a.header-nav__item.active {
   align-items: end;
   display: flex;
   transform: translateX(20%);
+  transform-origin: 40% 50% 0;
+  animation: earthshake 25s ease-in-out infinite;
 }
 .anim-marvel .iron-man {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-  z-index: 0;
+  z-index: 1;
   width: 275px;
   height: 550px;
 }
@@ -865,7 +950,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   flex-direction: column;
   bottom: 27px;
   left: -71px;
-  z-index: 1;
+  z-index: 3;
   width: 275px;
   height: 550px;
 }
@@ -1179,6 +1264,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   display: flex;
   align-items: center;
   flex-direction: column;
+  z-index: 2;
   width: 80px;
   height: 100px;
 }
@@ -1227,9 +1313,11 @@ a.header-nav__item:active, a.header-nav__item.active {
 }
 .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:first-of-type {
   top: 0;
+  animation: hulk-top-mouse 25s ease-in-out infinite;
 }
 .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:last-of-type {
   bottom: 0;
+  animation: hulk-bottom-mouse 25s ease-in-out infinite;
 }
 .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(2), .anim-marvel .hulk .hulk__head-container .hulk__head-mous > div:nth-of-type(4) {
   width: 100%;
@@ -1290,6 +1378,8 @@ a.header-nav__item:active, a.header-nav__item.active {
 .anim-marvel .hulk .hulk__body-container .hulk__arm-left {
   align-items: end;
   right: -100px;
+  transform-origin: 50% 10% 0;
+  animation: hulk-left-arm 25s ease-in-out infinite;
 }
 .anim-marvel .hulk .hulk__body-container .hulk__arm-left .hulk__arm-shoulder {
   border-radius: 50% 0 0 40%;
@@ -1306,6 +1396,8 @@ a.header-nav__item:active, a.header-nav__item.active {
 .anim-marvel .hulk .hulk__body-container .hulk__arm-right {
   align-items: start;
   left: -100px;
+  transform-origin: 50% 10% 0;
+  animation: hulk-right-arm 25s ease-in-out infinite;
 }
 .anim-marvel .hulk .hulk__body-container .hulk__arm-right .hulk__arm-shoulder {
   border-radius: 0 50% 40% 0;
@@ -1448,7 +1540,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   flex-direction: column;
   width: 325px;
   height: 577px;
-  z-index: 1;
+  z-index: 2;
   transform: translateX(-185%);
 }
 .anim-marvel .captain .captain__head-container {

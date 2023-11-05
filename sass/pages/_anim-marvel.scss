@@ -4,6 +4,9 @@
   display: flex;
 
   transform: translateX(20%);
+  transform-origin: 40% 50% 0;
+
+  animation: earthshake 25s ease-in-out infinite;
 
   & .iron-man {
     position: relative;
@@ -12,7 +15,7 @@
     align-items: center;
     flex-direction: column;
 
-    z-index: 0;
+    z-index: 1;
 
     width: 275px;
     height: 550px;
@@ -402,7 +405,7 @@
     bottom: 27px;
     left: -71px;
 
-    z-index: 1;
+    z-index: 3;
 
     width: 275px;
     height: 550px;
@@ -832,6 +835,8 @@
       align-items: center;
       flex-direction: column;
 
+      z-index: 2;
+
       width: 80px;
       height: 100px;
 
@@ -901,10 +906,12 @@
 
         & > div:first-of-type {
           top: 0;
+          animation: hulk-top-mouse 25s ease-in-out infinite;
         }
 
         & > div:last-of-type {
           bottom: 0;
+          animation: hulk-bottom-mouse 25s ease-in-out infinite;
         }
 
         & > div:nth-of-type(2),
@@ -986,6 +993,10 @@
       .hulk__arm-left {
         align-items: end;
         right: -100px;
+
+        transform-origin: 50% 10% 0;
+        animation: hulk-left-arm 25s ease-in-out infinite;
+
         .hulk__arm-shoulder {
           border-radius: 50% 0 0 40%;
           background-color: #949400;
@@ -1005,6 +1016,10 @@
       .hulk__arm-right {
         align-items: start;
         left: -100px;
+
+        transform-origin: 50% 10% 0;
+        animation: hulk-right-arm 25s ease-in-out infinite;
+
         .hulk__arm-shoulder {
           border-radius: 0 50% 40% 0;
           background-color: #babd00;
@@ -1206,7 +1221,7 @@
     width: 325px;
     height: 577px;
 
-    z-index: 1;
+    z-index: 2;
 
     transform: translateX(-185%);
 

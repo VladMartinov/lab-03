@@ -73,10 +73,14 @@ section {
   justify-content: center;
   flex-grow: 1;
 
-  overflow-x: hidden;
+  overflow: hidden;
 
   &.background-black {
     background-color: black;
+  }
+
+  &.background-anim {
+    animation: cloud-background 100s ease-in-out infinite;
   }
 }
 

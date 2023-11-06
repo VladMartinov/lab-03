@@ -602,6 +602,9 @@
         position: relative;
         right: -25px;
 
+        transform-origin: 50% 5% 0;
+        animation: tor-left-arm 100s ease-in-out 25s infinite;
+
         .tor__arm-shoulder-joint {
           background-color: #ffc587;
           border-radius: 50% 0 50% 50%;
@@ -642,6 +645,8 @@
 
             border-radius: 25%;
             background-color: black;
+
+            animation: tor-hammer 100s linear 25s infinite;
           }
         }
       }
@@ -1020,6 +1025,7 @@
 
             border-radius: 50%;
             background-color: white;
+            animation: hulk-right-arm-bg 100s ease-in-out infinite;
           }
         }
 
@@ -1060,6 +1066,7 @@
 
         transform-origin: 50% 10% 0;
         animation: hulk-right-arm 100s ease-in-out 50s infinite;
+
 
         .hulk__arm-shoulder {
           border-radius: 0 50% 40% 0;
@@ -1467,6 +1474,9 @@
 
         z-index: 2;
 
+        transform-origin: 50% 10% 0;
+        animation: captain-right-arm 100s ease-in-out 75s infinite;
+
         .captain__arm-shoulder-joint {
           background-color: #4ea7e2;
           border-radius: 0 50% 50% 0;
@@ -1503,6 +1513,8 @@
 
           border-radius: 50%;
           background-color: #ad390e;
+
+          animation: captain-shield 100s ease-in-out 75s infinite;
 
           & > div:nth-of-type(1),
           & > div:nth-of-type(2),

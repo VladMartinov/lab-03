@@ -75,8 +75,8 @@
 // Iron man
 @keyframes iron-man-fly {
   5% { transform: translateY(0); }
-  11% { transform: translateY(-500%); }
-  17% { transform: translateY(0); }
+  13% { transform: translateY(-500%); }
+  20% { transform: translateY(0); }
 }
 
 @keyframes iron-man-face {
@@ -88,28 +88,28 @@
 
 @keyframes iron-man-left-arm {
   0% { transform: rotate(0deg); }
-  2% { transform: rotate(30deg); }
-  17% { transform: rotate(30deg); }
-  20% { transform: rotate(0deg); }
+  5% { transform: rotate(30deg); }
+  20% { transform: rotate(30deg); }
+  25% { transform: rotate(0deg); }
 }
 @keyframes iron-man-right-arm {
   0% { transform: rotate(0deg); }
-  2% { transform: rotate(-30deg); }
-  17% { transform: rotate(-30deg); }
-  20% { transform: rotate(0deg); }
+  5% { transform: rotate(-30deg); }
+  20% { transform: rotate(-30deg); }
+  25% { transform: rotate(0deg); }
 }
 
 @keyframes iron-man-left-wrist {
   0% { transform: rotate(0deg); }
-  2% { transform: rotate(90deg) translateY(50%); }
-  17% { transform: rotate(90deg) translateY(50%); }
-  20% { transform: rotate(0deg); }
+  5% { transform: rotate(90deg) translateY(50%); }
+  20% { transform: rotate(90deg) translateY(50%); }
+  25% { transform: rotate(0deg); }
 }
 @keyframes iron-man-right-wrist {
   0% { transform: rotate(0deg); }
-  2% { transform: rotate(-90deg) translateY(50%); }
-  17% { transform: rotate(-90deg) translateY(50%); }
-  20% { transform: rotate(0deg); }
+  5% { transform: rotate(-90deg) translateY(50%); }
+  20% { transform: rotate(-90deg) translateY(50%); }
+  25% { transform: rotate(0deg); }
 }
 
 @keyframes iron-man-laser {
@@ -117,35 +117,83 @@
   3% { opacity: 1; }
   4% { opacity: 0; }
   5% { opacity: 1; }
-  17% { opacity: 1; }
-  18% { opacity: 0; }
+  19% { opacity: 1; }
+  22% { opacity: 0; }
+}
+
+// Tor
+@keyframes tor-left-arm {
+  0% { transform: rotate(0deg) scaleX(1); }
+  6% {transform: rotate(160deg) scaleX(-1); }
+  16% { transform: rotate(160deg) scaleX(-1); }
+  25% { transform: rotate(0deg) scaleX(1); }
+}
+
+@keyframes tor-hammer {
+  7% { box-shadow: none; background-color: black; }
+  8% { box-shadow: 0px 0px 100px 1px rgba(0, 199, 255, 0.7); background-color: rgb(0, 199, 255); }
+  9% { box-shadow: none; background-color: rgb(0, 199, 255); background-color: rgb(0, 199, 255); }
+  10% { box-shadow: 0px 0px 100px 1px rgba(0, 199, 255, 0.7); background-color: rgb(0, 199, 255); }
+  11% { box-shadow: none; background-color: rgb(0, 199, 255); background-color: rgb(0, 199, 255); }
+  12% { box-shadow: 0px 0px 100px 1px rgba(0, 199, 255, 0.7); background-color: rgb(0, 199, 255); }
+  16% { box-shadow: none; background-color: black; }
 }
 
 // Hulk
 @keyframes hulk-left-arm {
   0% { transform: rotate(0deg) scaleX(1); }
   6% {transform: rotate(160deg) scaleX(-1); }
-  13% { transform: rotate(160deg) scaleX(-1); }
-  20% { transform: rotate(0deg) scaleX(1); }
+  16% { transform: rotate(160deg) scaleX(-1); }
+  25% { transform: rotate(0deg) scaleX(1); }
 }
 @keyframes hulk-right-arm {
   0% { transform: rotate(0deg) scaleX(1); }
   6% { transform: rotate(-160deg) scaleX(-1); }
-  13% { transform: rotate(-160deg) scaleX(-1); }
-  20% { transform: rotate(0deg) scaleX(1); }
+  16% { transform: rotate(-160deg) scaleX(-1); }
+  25% { transform: rotate(0deg) scaleX(1); }
+}
+
+@keyframes hulk-right-arm-bg {
+  25% { background-color: white; }
+  30% { background-color: #554091 }
+  40% { background-color: #554091 }
+  45% { background-color: white; }
 }
 
 @keyframes hulk-top-mouse {
   0% { top: 0; }
   6% { top: -100%; }
-  13% { top: -100%; }
-  20% { top: 0; }
+  16% { top: -100%; }
+  25% { top: 0; }
 }
 @keyframes hulk-bottom-mouse {
   0% { bottom: 0; }
   6% { bottom: -100%; }
-  13% { bottom: -100%; }
-  20% { bottom: 0; }
+  16% { bottom: -100%; }
+  25% { bottom: 0; }
+}
+
+// Captain
+@keyframes captain-right-arm {
+  0% { transform: translateX(-40%) rotate(0deg); }
+  6% { transform: translateX(-40%) rotate(-90deg); }
+  7% { transform: translateX(-40%) rotate(-90deg) scaleY(-1); }
+  10% { transform: translateX(-40%) rotate(-90deg) scaleY(1); }
+  20% { transform: translateX(-40%) rotate(-90deg); }
+  25% { transform: translateX(-40%) rotate(0deg); }
+}
+
+@keyframes captain-shield {
+  0% { transform: scaleX(1) translate(-45%, -75%); }
+  5% { transform: scaleX(0.2) translate(-225%, -75%); }
+  6% { transform: scaleX(0.2) translate(-225%, -75% ); }
+  7% { transform: scaleX(0.2) translate(-225%, 1500% ); }
+  8% { transform: scaleX(0.2) translate(1000px, 1500%); }
+  11% { transform: scaleX(0.2) translate(1000px, 1500%); }
+  12% { transform: scaleX(0.2) translate(-225%, 1500%); }
+  13% { transform: scaleX(0.2) translate(-225%, -75%); }
+  20% { transform: scaleX(0.2) translate(-225%, -75%); }
+  25% { transform: scaleX(1) translate(-45%, -75%); }
 }
 
 // Other
@@ -158,4 +206,36 @@
   12% { transform: translateX(20%) rotate(10deg); }
   13% { transform: translateX(20%) rotate(-10deg); }
   14% { transform: translateX(20%) rotate(0); }
+}
+
+@keyframes cloud-background {
+  25% { background-color: white; }
+  30% { background-color: #554091 }
+  40% { background-color: #554091 }
+  45% { background-color: white; }
+}
+
+@keyframes scale {
+  to { transform: translateX(-45px) scale(1.5, 1.5) }
+}
+
+@keyframes lightCloud {
+  50% { background-color: #A586FF; }
+  52% { background-color: #f2f2f2; }
+  54% { background-color: #A586FF; }
+}
+
+@keyframes moveCloud {
+  25% { left: -100%; }
+  30% { left: 35%; }
+  40% { left: 35%; }
+  45% { left: -100%; }
+}
+
+@keyframes lightning {
+  32% { opacity: 0 }
+  33% { opacity: 1 }
+  34% { opacity: 0 }
+  35% { opacity: 1 }
+  36% { opacity: 0 }
 }

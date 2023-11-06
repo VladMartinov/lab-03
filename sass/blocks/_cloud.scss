@@ -1,0 +1,128 @@
+/* Mixins */
+@mixin clouds {
+  position: absolute;
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  background-color: #A586FF;
+  transform: translateX(-45px);
+}
+
+.cloud {
+  position: absolute;
+
+  left: -100%;
+
+  width: 420px;
+  height: 90vh;
+
+  overflow: hidden;
+  animation: moveCloud 100s ease-in-out infinite;
+
+  &__clouds-1 {
+    position: relative;
+
+    padding-top: 65px;
+
+    top: -50px;
+    left: 185px;
+
+    z-index: 1;
+
+    span {
+      @include clouds;
+      left: 40px;
+
+      animation: scale random(2) + s infinite alternate ease-in-out;
+      animation-delay: .4s;
+    }
+  }
+  &__clouds-2 {
+    position: relative;
+
+    top: -30px;
+    left: 145px;
+
+    z-index: 1;
+
+    @for $i from 1 to 4 {
+      span:nth-child(#{$i}) {
+        @include clouds;
+
+        left: 40px * $i;
+
+        animation: scale random(2) + s infinite alternate ease-in-out, lightCloud 1.5s + $i infinite;
+        animation-delay: .1s;
+      }
+    }
+  }
+  &__clouds-3 {
+    position: relative;
+
+    top: 0px;
+    left: 110px;
+
+    z-index: 1;
+
+    @for $i from 1 to 6 {
+      span:nth-child(#{$i}) {
+        @include clouds;
+        left: 40px * $i;
+
+        animation: scale random(2) + s infinite alternate ease-in-out, lightCloud 3s + $i infinite;
+        animation-delay: .2s;
+      }
+    }
+  }
+  &__lightning {
+    position: absolute;
+
+    width: 30px;
+    height: 10%;
+
+    left: 40%;
+    top: 100px;
+
+    opacity: 0;
+    z-index: 0;
+
+    animation: lightning 100s linear infinite;
+
+    div:first-child {
+      position: absolute;
+
+      width: 20px;
+      height: 75px;
+
+      background-color: #f2f2f2;
+      transform: skew(-10deg, -10deg);
+    }
+    div:nth-child(2) {
+      position: absolute;
+
+      width: 20px;
+      height: 75px;
+
+      top: 60px;
+      left: 0px;
+
+      background-color: #f2f2f2;
+      transform: skew(-10deg, -10deg);
+    }
+    div:last-child {
+      position: absolute;
+
+      width: 20px;
+      height: 75px;
+
+      top: 120px;
+      left: 0px;
+
+      background-color: #f2f2f2;
+      transform: skew(-10deg, -10deg);
+    }
+  }
+}

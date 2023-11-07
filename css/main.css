@@ -766,7 +766,7 @@ section {
 }
 .header {
   padding: 25px 0;
-  background-color: #6e6eff;
+  background-color: #b7245c;
 }
 
 .header-nav {
@@ -776,20 +776,21 @@ section {
 }
 
 a.header-nav__item {
-  padding: 10px 25px;
-  border: 1px solid #6e00ff;
+  padding: 0px 25px;
+  border: 1px solid #941e4b;
   border-radius: 10px;
-  background-color: #6e6eff;
+  background-color: #b7245c;
   transition: background-color 0.1s ease-in, border-color 0.1s ease-in;
   font-size: 14px;
+  line-height: 45px;
   color: #fff;
 }
 a.header-nav__item:hover {
-  background-color: #6e00ff;
+  background-color: #941e4b;
   animation: wiggle 2.5s infinite;
 }
 a.header-nav__item:active, a.header-nav__item.active {
-  background-color: rgba(110, 0, 255, 0.65);
+  background-color: rgba(148, 30, 75, 0.7);
   border-color: #fff;
 }
 
@@ -836,7 +837,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 40px;
-  animation: scale 2s infinite alternate ease-in-out, lightCloud 2.5s infinite;
+  animation: scale 1s infinite alternate ease-in-out, lightCloud 2.5s infinite;
   animation-delay: .1s;
 }
 .cloud__clouds-2 span:nth-child(2) {
@@ -860,7 +861,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 120px;
-  animation: scale 1s infinite alternate ease-in-out, lightCloud 4.5s infinite;
+  animation: scale 2s infinite alternate ease-in-out, lightCloud 4.5s infinite;
   animation-delay: .1s;
 }
 .cloud__clouds-3 {
@@ -878,7 +879,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 40px;
-  animation: scale 2s infinite alternate ease-in-out, lightCloud 4s infinite;
+  animation: scale 1s infinite alternate ease-in-out, lightCloud 4s infinite;
   animation-delay: .2s;
 }
 .cloud__clouds-3 span:nth-child(2) {

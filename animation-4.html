@@ -49,8 +49,24 @@
 
 				<div class="anim-pagination__item"></div>
 
-				<div class="anim-pagination__arrow-right"></div>
+				<div class="anim-pagination__arrow-right active"></div>
 			</div>
 		</main>
+
+		<script>
+			const leftArrow = document.querySelector('.anim-pagination__arrow-left');
+			const rightArrow = document.querySelector('.anim-pagination__arrow-right');
+
+			function ArrowState() {
+				setTimeout(() => leftArrow.classList.toggle('active'), 1700)
+				setTimeout(() => rightArrow.classList.toggle('active'), 4250)
+
+				setTimeout(() => rightArrow.classList.toggle('active'), 5800)
+				setTimeout(() => leftArrow.classList.toggle('active'), 8500)
+			}
+
+			ArrowState();
+			setInterval(() => ArrowState(), 10000)
+		</script>
 	</body>
 </html>

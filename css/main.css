@@ -299,31 +299,34 @@ section {
 }
 /* Анимация №4. Навигация */
 @keyframes anim-pagination {
-  0% {
+  8% {
     content: "1 / 5";
   }
-  10% {
+  16% {
     content: "1 / 5";
   }
-  20% {
+  24% {
     content: "2 / 5";
   }
-  30% {
+  33% {
     content: "3 / 5";
   }
-  40% {
+  41% {
     content: "4 / 5";
   }
-  50% {
+  49% {
     content: "5 / 5";
   }
-  60% {
+  57% {
+    content: "5 / 5";
+  }
+  66% {
     content: "4 / 5";
   }
-  70% {
+  74% {
     content: "3 / 5";
   }
-  80% {
+  82% {
     content: "2 / 5";
   }
   90% {
@@ -331,80 +334,6 @@ section {
   }
   100% {
     content: "1 / 5";
-  }
-}
-@keyframes anim-pagination-right-bef {
-  0% {
-    transform: rotate(35deg);
-    opacity: 1;
-  }
-  40% {
-    transform: rotate(35deg);
-    opacity: 1;
-  }
-  50% {
-    transform: rotate(0);
-  }
-  60% {
-    transform: rotate(35deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(35deg);
-    opacity: 1;
-  }
-}
-@keyframes anim-pagination-right-aft {
-  0% {
-    transform: rotate(-35deg);
-    opacity: 1;
-  }
-  40% {
-    transform: rotate(-35deg);
-    opacity: 1;
-  }
-  50% {
-    transform: rotate(0);
-  }
-  60% {
-    transform: rotate(-35deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-35deg);
-    opacity: 1;
-  }
-}
-@keyframes anim-pagination-left-bef {
-  10% {
-    transform: rotate(0);
-  }
-  20% {
-    transform: rotate(-35deg);
-    opacity: 1;
-  }
-  80% {
-    transform: rotate(-35deg);
-    opacity: 1;
-  }
-  90% {
-    transform: rotate(0);
-  }
-}
-@keyframes anim-pagination-left-aft {
-  10% {
-    transform: rotate(0);
-  }
-  20% {
-    transform: rotate(35deg);
-    opacity: 1;
-  }
-  80% {
-    transform: rotate(35deg);
-    opacity: 1;
-  }
-  90% {
-    transform: rotate(0);
   }
 }
 /* Анимация №11. Marvel */
@@ -819,7 +748,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 40px;
-  animation: scale 1s infinite alternate ease-in-out;
+  animation: scale 2s infinite alternate ease-in-out;
   animation-delay: .4s;
 }
 .cloud__clouds-2 {
@@ -849,7 +778,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 80px;
-  animation: scale 2s infinite alternate ease-in-out, lightCloud 3.5s infinite;
+  animation: scale 1s infinite alternate ease-in-out, lightCloud 3.5s infinite;
   animation-delay: .1s;
 }
 .cloud__clouds-2 span:nth-child(3) {
@@ -891,7 +820,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 80px;
-  animation: scale 2s infinite alternate ease-in-out, lightCloud 5s infinite;
+  animation: scale 1s infinite alternate ease-in-out, lightCloud 5s infinite;
   animation-delay: .2s;
 }
 .cloud__clouds-3 span:nth-child(3) {
@@ -927,7 +856,7 @@ a.header-nav__item:active, a.header-nav__item.active {
   background-color: #A586FF;
   transform: translateX(-45px);
   left: 200px;
-  animation: scale 2s infinite alternate ease-in-out, lightCloud 8s infinite;
+  animation: scale 1s infinite alternate ease-in-out, lightCloud 8s infinite;
   animation-delay: .2s;
 }
 .cloud__lightning {
@@ -1029,18 +958,10 @@ a.header-nav__item:active, a.header-nav__item.active {
   width: 30px;
   height: 3px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(0);
   background-color: #fff;
   opacity: 0.5;
   transition: transform 0.2s ease-in-out;
-}
-.anim-pagination__arrow-left:hover::before,
-.anim-pagination__arrow-right:hover::before {
-  transform: rotate(-45deg) !important;
-}
-.anim-pagination__arrow-left:hover::after,
-.anim-pagination__arrow-right:hover::after {
-  transform: rotate(45deg) !important;
 }
 
 .anim-pagination__arrow-left {
@@ -1050,11 +971,19 @@ a.header-nav__item:active, a.header-nav__item.active {
   left: 0;
   transform-origin: 0 50% 0;
 }
-.anim-pagination__arrow-left::before {
-  animation: anim-pagination-left-bef 10s infinite;
+.anim-pagination__arrow-left.active::before {
+  transform: translateY(-50%) rotate(-35deg);
+  opacity: 1;
 }
-.anim-pagination__arrow-left::after {
-  animation: anim-pagination-left-aft 10s infinite;
+.anim-pagination__arrow-left.active::after {
+  transform: translateY(-50%) rotate(35deg);
+  opacity: 1;
+}
+.anim-pagination__arrow-left.active:hover::before {
+  transform: translateY(-50%) rotate(-25deg);
+}
+.anim-pagination__arrow-left.active:hover::after {
+  transform: translateY(-50%) rotate(25deg);
 }
 
 .anim-pagination__arrow-right {
@@ -1064,11 +993,19 @@ a.header-nav__item:active, a.header-nav__item.active {
   right: 0;
   transform-origin: 100% 50% 0;
 }
-.anim-pagination__arrow-right::before {
-  animation: anim-pagination-right-bef 10s infinite;
+.anim-pagination__arrow-right.active::before {
+  transform: translateY(-50%) rotate(35deg);
+  opacity: 1;
 }
-.anim-pagination__arrow-right::after {
-  animation: anim-pagination-right-aft 10s infinite;
+.anim-pagination__arrow-right.active::after {
+  transform: translateY(-50%) rotate(-35deg);
+  opacity: 1;
+}
+.anim-pagination__arrow-right.active:hover::before {
+  transform: translateY(-50%) rotate(25deg);
+}
+.anim-pagination__arrow-right.active:hover::after {
+  transform: translateY(-50%) rotate(-25deg);
 }
 
 /* Text */

@@ -20,18 +20,10 @@
     width: 30px;
     height: 3px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(0);
     background-color: #fff;
     opacity: 0.5;
     transition: transform 0.2s ease-in-out;
-  }
-  &:hover {
-    &::before {
-      transform: rotate(-45deg) !important;
-    }
-    &::after {
-      transform: rotate(45deg) !important;
-    }
   }
 }
 
@@ -43,8 +35,18 @@
     left: 0;
     transform-origin: 0 50% 0;
   }
-  &::before { animation: anim-pagination-left-bef 10s infinite; }
-  &::after { animation: anim-pagination-left-aft 10s infinite; }
+  &.active::before {
+    transform: translateY(-50%) rotate(-35deg);
+    opacity: 1;
+  }
+  &.active::after {
+    transform: translateY(-50%) rotate(35deg);
+    opacity: 1;
+  }
+  &.active:hover {
+    &::before { transform: translateY(-50%) rotate(-25deg); }
+    &::after { transform: translateY(-50%) rotate(25deg); }
+  }
 }
 .anim-pagination__arrow-right {
   margin-left: 30px;
@@ -54,8 +56,18 @@
     right: 0;
     transform-origin: 100% 50% 0;
   }
-  &::before { animation: anim-pagination-right-bef 10s infinite; }
-  &::after { animation: anim-pagination-right-aft 10s infinite; }
+  &.active::before {
+    transform: translateY(-50%) rotate(35deg);
+    opacity: 1;
+  }
+  &.active::after {
+    transform: translateY(-50%) rotate(-35deg);
+    opacity: 1;
+ }
+ &.active:hover {
+   &::before { transform: translateY(-50%) rotate(25deg); }
+   &::after { transform: translateY(-50%) rotate(-25deg); }
+ }
 }
 
 /* Text */
